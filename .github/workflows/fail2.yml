@@ -1,0 +1,14 @@
+name: Always Fail
+
+on:
+  push:
+    branches:
+      - main # Change this to your branch name if necessary
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Fail Step
+      run: exit 1
